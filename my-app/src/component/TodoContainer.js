@@ -3,13 +3,16 @@ import TodoAddComponent from "./TodoAddComponent";
 import TodoListComponent from "./TodoListComponent"
 
 
-function TodoContainerF(){
+function TodoContainerF() {
 
-    const {list , addTodo ,updatTextTodo} = useHokks()
-    return(
+    const { list, addTodo, updatTextTodo, markdone, deleteItem } = useHokks()
+    return (
         <div>
-            <TodoAddComponent onAdd = {addTodo}/>
-             <TodoListComponent list={list} onUpdatText={updatTextTodo}></TodoListComponent> 
+            <TodoAddComponent onAdd={addTodo} />
+            <TodoListComponent list={list}
+                onUpdatText={updatTextTodo}
+                onMarkdone={markdone}
+                onDeleteItem={deleteItem}></TodoListComponent>
         </div>
     )
 }

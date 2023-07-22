@@ -1,12 +1,12 @@
 
 import './App.css';
-import TodoContainerF from './component/TodoContainer';
-import TodoContainer from './todo component/TodoContainer';
+import MainCintainerWeb from './practiceFile/MainContainer';
+
 
 function App() {
   return (
     <div className="App">
-      <TodoContainerF/>
+      <MainCintainerWeb/>
     </div>
   );
 }

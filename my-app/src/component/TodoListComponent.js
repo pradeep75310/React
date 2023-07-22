@@ -1,25 +1,25 @@
 import TodoItemComponent from "./TodoItemComponent"
 
 
-function TodoListComponent(props){
-    const {list , onUpdatText} = props
-    console.log(list)
-
-    function render(item){
-        return(
+function TodoListComponent(props) {
+    const { list, onUpdatText, onMarkdone, onDeleteItem } = props
+    function render(item) {
+        return (
             <div>
-                <TodoItemComponent id={item.id} 
-                text={item.text} 
-                status = {item.status} 
-                onUpdatText={onUpdatText}
-                key={item.id}></TodoItemComponent>
+                <TodoItemComponent id={item.id}
+                    text={item.text}
+                    status={item.status}
+                    onUpdatText={onUpdatText}
+                    onMarkdone={onMarkdone}
+                    onDeleteItem={onDeleteItem}
+                    key={item.id}></TodoItemComponent>
             </div>
         )
     }
-    return(
+    return (
         <div>
             <ul>
-            {list.map(render)}
+                {list.map(render)}
             </ul>
         </div>
     )
